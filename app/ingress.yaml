@@ -5,11 +5,11 @@ metadata:
   namespace: dev
   annotations:
     kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/router.priority: "1"
 spec:
   ingressClassName: traefik
   rules:
-    - host: playground.127.0.0.1.nip.io
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
